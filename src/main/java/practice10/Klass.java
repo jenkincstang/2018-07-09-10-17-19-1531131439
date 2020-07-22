@@ -13,6 +13,7 @@ public class Klass {
         students = new LinkedList<>();
     }
 
+
     public int getNumber() {
         return number;
     }
@@ -25,16 +26,24 @@ public class Klass {
         return "Class " + number;
     }
 
+    public List<Student> getStudents() {
+        return students;
+    }
+
     public void assignLeader(Student student){
         if (students != null && students.contains(student)){
             this.leader = student;
         }else {
-            System.out.println("It is not one of us.");
+            System.out.print("It is not one of us.\n");
         }
 
     }
 
     public boolean isIn(Student student){
+        if(students == null || students.size() == 0){
+            return false;
+        }
+
         if(students.contains(student)){
             return true;
         }else {
