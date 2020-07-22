@@ -28,7 +28,7 @@ public class Klass {
         if (students.contains(student)){
             this.leader = student;
         }else {
-            System.out.println("It is not one of us.");
+            System.out.print("It is not one of us.\n");
         }
 
     }
